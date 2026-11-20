@@ -50,10 +50,8 @@ h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;color:var(--navy)}
 .top{position:relative;z-index:5}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo img{height:46px;width:auto}
-.logo-txt{display:none;font-weight:800;font-size:22px;color:var(--navy)}
-.logo-txt span{color:var(--orange)}
-.partner{font-size:13px;color:var(--muted);border-left:1px solid var(--line);padding-left:12px;line-height:1.25}
+.logo img{height:44px;width:auto}
+.partner{font-size:13px;color:var(--muted);border-left:1px solid var(--line);padding-left:14px;margin-left:4px;line-height:1.25}
 .partner b{color:var(--navy);display:block;font-weight:600}
 .top .btn{padding:12px 22px;font-size:15px}
 
@@ -106,10 +104,13 @@ h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;color:var(--navy)}
 .fine{font-size:12.5px;color:#8A93A6;margin-top:14px}
 
 /* Faixa Rede D'Or */
-.rede{position:relative;border-radius:36px;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff}
-.rede img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:20% 70%}
-.rede::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,56,.94) 0%,rgba(11,37,89,.78) 45%,rgba(11,37,89,.15) 100%)}
+.rede{position:relative;border-radius:36px;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;color:#fff}
+.rede .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.rede::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,22,56,.92) 0%,rgba(11,37,89,.72) 40%,rgba(11,37,89,.12) 72%,rgba(11,37,89,0) 100%)}
 .rede-txt{position:relative;z-index:1;padding:56px 64px;max-width:640px}
+.rede-logos{display:flex;align-items:center;gap:22px;margin-bottom:22px}
+.rede-logos img{height:40px;width:auto}
+.rede-logos .x{width:1px;height:40px;background:rgba(255,255,255,.4)}
 .rede-txt .tag{display:inline-block;background:var(--orange);color:#fff;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;letter-spacing:.03em;text-transform:uppercase}
 .rede-txt h2{color:#fff;margin-top:16px;font-size:clamp(30px,4vw,48px)}
 .rede-txt p{color:#D0DAF1;font-size:18px;margin-top:14px}
@@ -152,12 +153,12 @@ h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;color:var(--navy)}
 .steps-cta{position:relative;margin-top:44px}
 
 /* Rodapé */
-footer{background:var(--navy-3);color:#9FB0D3;padding:56px 0 110px;font-size:14px;margin-top:96px}
+footer{background:var(--navy-3);color:#9FB0D3;padding:56px 0 48px;font-size:14px;margin-top:96px}
 .foot{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
 .foot h4{color:#fff;font-size:15px;font-weight:600;margin-bottom:10px}
 .foot a{color:#9FB0D3;text-decoration:none}
 .foot a:hover{color:#fff}
-.foot .logo-txt{display:block;color:#fff}
+.foot-logo{height:60px;width:auto}
 .legal{border-top:1px solid rgba(255,255,255,.1);margin-top:36px;padding-top:24px;font-size:12.5px;color:#7F90B5}
 
 /* WhatsApp flutuante + barra mobile */
@@ -206,8 +207,11 @@ form .btn:hover{background:#1EBE5A}
 @media (max-width:640px){
   .wrap{padding:0 16px}
   .top .wrap{height:70px}
-  .logo img{height:38px}
-  .partner,.top .btn{display:none}
+  .logo img{height:34px}
+  .top .btn{display:none}
+  .partner{font-size:11.5px;padding-left:10px}
+  .rede .bg{object-position:30% 60%}
+  .rede-logos{gap:14px}.rede-logos img{height:26px}.rede-logos .x{height:26px}
   .hero{padding-top:0}
   .hero-card{border-radius:28px}
   .hero-txt{padding:36px 22px 0}
@@ -236,7 +240,7 @@ form .btn:hover{background:#1EBE5A}
   .steps::before{display:none}
   .steps-cta .btn{width:100%;justify-content:center}
   .foot{grid-template-columns:1fr;gap:28px}
-  footer{margin-top:64px}
+  footer{margin-top:64px;padding-bottom:110px}
   .wa-float{display:none}
   .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
   .mbar .btn{width:100%;justify-content:center;background:var(--wa);color:#fff;box-shadow:none;padding:15px}
@@ -264,10 +268,9 @@ form .btn:hover{background:#1EBE5A}
 
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Canal Life Corretora">
-      <img src="https://canallife.com.br/wp-content/uploads/2024/10/logo.png" alt="Canal Life" width="77" height="46" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <span class="logo-txt">Canal<span>Life</span></span>
-      <span class="partner"><b>Corretora parceira</b>SulAmérica Saúde</span>
+    <a class="logo" href="#" aria-label="SulAmérica Saúde para médicos">
+      <img src="img/logo-sulamerica.webp" alt="SulAmérica Saúde" width="173" height="44">
+      <span class="partner"><b>Planos para médicos</b>Corretora autorizada</span>
     </a>
     <button class="btn btn-primary js-lead" data-origem="header"><svg><use href="#i-wa"/></svg>Fale conosco</button>
   </div>
@@ -322,11 +325,14 @@ form .btn:hover{background:#1EBE5A}
   <!-- REDE D'OR -->
   <section>
     <div class="wrap">
-      <!-- FOTO: substituir por imagem oficial de hospital Rede D'Or (ex.: Vila Nova Star / Copa Star) do material de divulgação da SulAmérica -->
       <div class="rede rv">
-        <img src="img/hospital.webp" alt="Fachada de hospital moderno" loading="lazy" width="1600" height="1067">
+        <img class="bg" src="img/hospital-sao-luiz.webp" alt="Hospital São Luiz, da Rede D'Or" loading="lazy" width="1024" height="727">
         <div class="rede-txt">
-          <span class="tag">SulAmérica + Rede D'Or</span>
+          <div class="rede-logos">
+            <img src="img/logo-sulamerica-branco.webp" alt="SulAmérica" width="133" height="34">
+            <span class="x" aria-hidden="true"></span>
+            <img src="img/logo-rededor-branco.webp" alt="Rede D'Or" width="144" height="34">
+          </div>
           <h2>A operadora do maior grupo hospitalar do país.</h2>
           <p>A SulAmérica faz parte do grupo Rede D'Or São Luiz. Para o médico, isso significa um plano ligado a hospitais que ele já conhece e respeita.</p>
         </div>
@@ -374,8 +380,8 @@ form .btn:hover{background:#1EBE5A}
   <div class="wrap">
     <div class="foot">
       <div>
-        <span class="logo-txt">Canal<span>Life</span></span>
-        <p style="margin-top:10px">Corretora de seguros especializada em planos de saúde. Parceira SulAmérica Saúde.</p>
+        <img class="foot-logo" src="img/logo-canallife-branco.webp" alt="Canal Life Corretora" width="176" height="60" loading="lazy">
+        <p style="margin-top:14px">Corretora de seguros especializada em planos de saúde. Parceira SulAmérica Saúde.</p>
       </div>
       <div>
         <h4>Contato</h4>

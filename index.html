@@ -65,22 +65,24 @@ h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;color:var(--navy)}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:500;letter-spacing:.02em}
 .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--orange-2);box-shadow:0 0 0 4px rgba(255,138,61,.25)}
 .brand-line{margin-top:26px;font-size:20px;font-weight:600;color:var(--orange-2);letter-spacing:.01em}
-.hero h1{font-size:clamp(40px,5.4vw,66px);font-weight:800;margin-top:6px}
+.hero-rd{height:22px;width:auto;opacity:.9}
+.hero h1{font-size:clamp(38px,4.6vw,60px);font-weight:800;margin-top:22px}
+.hero h1 .nw{white-space:nowrap;display:block}
 .hero p.sub{font-size:18px;color:#CBD6F0;max-width:470px;margin-top:18px}
 .hero p.sub b{color:#fff;font-weight:600}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:32px}
 .hero-note{font-size:14px;color:#AFC0E4;display:flex;align-items:center;gap:8px}
 .hero-note svg{width:18px;height:18px;color:var(--orange-2)}
 .hero-media{position:relative}
-.hero-media .doc{position:absolute;bottom:0;right:40px;height:108%;width:auto;max-width:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+.hero-media .doc{position:absolute;bottom:0;right:10px;height:104%;width:auto;max-width:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
 .chip{position:absolute;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px 12px 12px;display:flex;align-items:center;gap:12px;box-shadow:0 16px 36px rgba(4,16,44,.28);font-size:14px;line-height:1.2;white-space:nowrap;animation:float 6s ease-in-out infinite}
 .chip b{display:block;font-size:15px;color:var(--navy)}
 .chip small{color:var(--muted)}
 .chip .ic{width:38px;height:38px;border-radius:11px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;flex:none}
 .chip .ic svg{width:20px;height:20px}
-.chip.c1{top:22%;left:-8%}
-.chip.c2{top:48%;right:-2%;animation-delay:-2s}
-.chip.c3{bottom:12%;left:2%;animation-delay:-4s}
+.chip.c1{top:30%;left:-6%}
+.chip.c2{top:56%;right:-2%;animation-delay:-2s}
+.chip.c3{bottom:8%;left:-2%;animation-delay:-4s}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
 /* Seção benefícios */
@@ -198,7 +200,7 @@ form .btn:hover{background:#1EBE5A}
   .hero-card{grid-template-columns:1fr;min-height:0}
   .hero-txt{padding:48px 32px 0}
   .hero-media{height:420px}
-  .hero-media .doc{height:110%;right:50%;transform:translateX(50%)}
+  .hero-media .doc{height:104%;right:50%;transform:translateX(50%)}
   .chip.c1{left:4%;top:18%}.chip.c2{right:4%;top:44%}.chip.c3{left:6%;bottom:10%}
   .benefits,.brasil{grid-template-columns:1fr;gap:48px}
   .ben-media{max-width:440px;margin:0 auto;width:100%}
@@ -215,15 +217,15 @@ form .btn:hover{background:#1EBE5A}
   .hero{padding-top:0}
   .hero-card{border-radius:28px}
   .hero-txt{padding:36px 22px 0}
-  .brand-line{font-size:17px;margin-top:20px}
   .hero p.sub{font-size:16.5px}
   .hero-cta .btn{width:100%;justify-content:center}
   .hero-media{height:400px;margin-top:28px}
   .hero-media .doc{height:100%}
+  .hero h1{font-size:clamp(32px,9.6vw,40px);margin-top:18px}
   .chip{font-size:12.5px;padding:9px 12px 9px 9px;gap:9px}
   .chip b{font-size:13.5px}
   .chip .ic{width:32px;height:32px}
-  .chip.c1{left:0;top:14%}.chip.c2{right:0;top:42%}.chip.c3{left:2%;bottom:8%}
+  .chip.c1{left:0;top:44%}.chip.c2{right:0;top:62%}.chip.c3{left:2%;bottom:6%}
   .sec{padding:64px 0}
   .ben-media{padding:0 0 28px 20px}
   .stamp{right:-6px;bottom:52px}
@@ -282,9 +284,8 @@ form .btn:hover{background:#1EBE5A}
     <div class="wrap">
       <div class="hero-card">
         <div class="hero-txt">
-          <span class="eyebrow"><i></i>Grupo Rede D'Or</span>
-          <div class="brand-line">SulAmérica Saúde</div>
-          <h1>O plano feito para <span class="hl">médicos.</span></h1>
+          <img class="hero-rd" src="img/logo-rededor-branco.webp" alt="Grupo Rede D'Or" width="91" height="22">
+          <h1>O plano feito <span class="nw">para <span class="hl">médicos.</span></span></h1>
           <p class="sub">Contratação via <b>CNPJ ou entidade de classe</b>, com a rede de hospitais do grupo Rede D'Or. Cotação rápida, direto no WhatsApp.</p>
           <div class="hero-cta">
             <button class="btn btn-primary js-lead" data-origem="hero"><svg><use href="#i-wa"/></svg>Quero minha cotação</button>
@@ -292,7 +293,7 @@ form .btn:hover{background:#1EBE5A}
           </div>
         </div>
         <div class="hero-media">
-          <img class="doc" src="img/doctor-m.webp" alt="Médico sorrindo de jaleco branco" width="634" height="1313">
+          <img class="doc" src="img/doctor-m-zoom.webp" alt="Médico sorrindo de jaleco branco" width="900" height="1305">
           <div class="chip c1"><span class="ic"><svg><use href="#i-hosp"/></svg></span><span><b>Hospitais Rede D'Or</b><small>conforme o plano</small></span></div>
           <div class="chip c2"><span class="ic"><svg><use href="#i-refund"/></svg></span><span><b>Reembolso</b><small>livre escolha</small></span></div>
           <div class="chip c3"><span class="ic"><svg><use href="#i-bed"/></svg></span><span><b>Quarto privativo</b><small>em apartamento</small></span></div>
